@@ -61,6 +61,14 @@
   color: black;
 }
 
+.darkBorder{
+  border: 5px solid #ffffff;
+  border-radius: 10px;
+}
+.lightBorder{
+  border: 5px solid #3b3b3b;
+  border-radius: 10px;
+}
 /* Dark Mode Text */
 .dark .text h2 {
   color: #1e90ff;

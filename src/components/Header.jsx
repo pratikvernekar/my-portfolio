@@ -48,7 +48,7 @@ const Header = ({ toggleDarkMode, darkMode }) => {
         </nav>
 
         <button className="toggle-button" onClick={toggleDarkMode}>
-          {darkMode ? <Sun size={20} /> : <Moon size={20} />}
+          {darkMode ? <Sun size={20} color="white" /> : <Moon size={20} color="black" />}
         </button>
       </div>
     </header>

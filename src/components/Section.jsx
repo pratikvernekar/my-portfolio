@@ -16,8 +16,12 @@ const Section = ({ id, title, children, darkMode }) => {
           </p>
         </div>
 
-        <div className="image-container">
-          <img src={profilePic} alt="Profile" className="profile-image" />
+        <div className={`image-container`}>
+          <img
+            src={profilePic}
+            alt="Profile"
+            className={`profile-image ${darkMode ? "darkBorder" : "lightBorder"}`}
+          />
         </div>
       </div>
     </section>
