@@ -1,0 +1,66 @@
+.skills-container {
+  text-align: center;
+  padding: 50px 10%;
+  height: 100vh;
+  box-sizing: border-box;
+  /* box-shadow: 0px 10px 30px rgba(0, 0, 0, 01); */
+  transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+/* Light Mode */
+.light {
+  background: linear-gradient(
+    90deg,
+    rgba(0, 123, 255, 0.2),
+    rgba(255, 255, 255, 0.5)
+  );
+  color: black;
+}
+
+/* Dark Mode */
+.dark {
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.8), rgba(50, 50, 50, 0.6));
+  color: white;
+}
+
+.skills-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #007bff;
+}
+
+/* Skill List */
+.skill-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+.skill {
+  font-size: 1.1rem;
+  font-weight: 500;
+  padding: 10px 20px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+/* Light Mode Skills */
+.light .skill {
+  background: rgba(0, 123, 255, 0.2);
+  color: black;
+}
+
+/* Dark Mode Skills */
+.dark .skill {
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+}
+
+.skill:hover {
+  transform: scale(1.1);
+}

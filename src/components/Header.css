@@ -1,0 +1,129 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  position: sticky;
+  top: 0;
+  left: 0;
+  padding: 15px 20px;
+  backdrop-filter: blur(10px); /* Glass effect */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out, background 0.3s ease-in-out;
+  z-index: 1000;
+  box-sizing: border-box;
+}
+
+/* Light Mode */
+.light {
+  background: linear-gradient(
+    90deg,
+    rgba(0, 123, 255, 0.8),
+    rgba(255, 255, 255, 0.8)
+  );
+  color: black;
+}
+
+/* Dark Mode */
+.dark {
+  background: linear-gradient(
+    90deg,
+    rgba(10, 10, 10, 0.9),
+    rgba(50, 50, 50, 0.9)
+  );
+  color: white;
+}
+
+/* Hide header when scrolling down */
+.hidden {
+  transform: translateY(-100%);
+}
+
+/* Show header when scrolling up */
+.visible {
+  transform: translateY(0);
+}
+
+/* Left side (Image + Name) */
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.profileImg {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+/* Right side (Nav + Toggle) */
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  cursor: pointer;
+}
+
+.nav-item {
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: 500;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.light .nav-item {
+  color: black;
+}
+
+.dark .nav-item {
+  color: white;
+}
+
+.nav-item:hover {
+  color: #ffd700;
+  transform: translateY(-2px);
+}
+
+/* Dark Mode Toggle Button */
+.toggle-button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.toggle-button:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: rotate(20deg);
+}
+
+/* Responsive Design */
+/* @media (max-width: 768px) {
+  .header {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+} */

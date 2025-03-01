@@ -1,0 +1,125 @@
+.projects-container {
+    padding: 50px 10%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    min-height: 100vh;
+    transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+  }
+  
+  /* Light Mode */
+  .light .projects-container {
+    /* background: linear-gradient(90deg, rgba(0, 123, 255, 0.2), rgba(255, 255, 255, 0.5)); */
+    color: black;
+  }
+  
+  /* Dark Mode */
+  .dark .projects-container {
+    /* background: linear-gradient(90deg, rgba(0, 0, 0, 0.8), rgba(50, 50, 50, 0.6)); */
+    color: white;
+  }
+  
+  /* Category Title */
+  .category-title {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    text-align: center;
+    color: #007bff;
+  }
+  
+  /* Dark Mode Category Title */
+  .dark .category-title {
+    color: #1e90ff;
+  }
+  
+  /* Project List */
+  .project-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  /* Individual Project Card */
+  .project {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    max-width: 320px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  /* Light Mode Card */
+  .light .project {
+    background: rgba(0, 123, 255, 0.1);
+    color: black;
+  }
+  
+  /* Dark Mode Card */
+  .dark .project {
+    background: rgba(50, 50, 50, 0.8);
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  
+  /* Project Title */
+  .project h3 {
+    font-size: 1.5rem;
+  }
+  
+  /* Dark Mode Title */
+  .dark .project h3 {
+    color: #87ceeb;
+  }
+  
+  /* Project Description */
+  .project p {
+    font-size: 1rem;
+    margin: 10px 0;
+  }
+  
+  /* Dark Mode Text */
+  .dark .project p {
+    color: #ddd;
+  }
+  
+  /* Project Link */
+  .project-link {
+    display: inline-block;
+    margin-top: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    color: #007bff;
+    transition: color 0.3s ease;
+  }
+  
+  /* Dark Mode Link */
+  .dark .project-link {
+    color: #1e90ff;
+  }
+  
+  .project-link:hover {
+    text-decoration: underline;
+    color: #ffd700;
+  }
+  
+  /* Hover effect */
+  .project:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Dark Mode Hover Effect */
+  .dark .project:hover {
+    box-shadow: 0px 10px 20px rgba(255, 255, 255, 0.2);
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .project-list {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  

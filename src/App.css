@@ -1,0 +1,46 @@
+/* Light & Dark Mode */
+.app-container {
+  transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+  /* border: 1px solid red */
+}
+
+.dark {
+  background: #5e5ed1;
+  color: white;
+}
+
+.light {
+  background: white;
+  color: black;
+}
+
+/* Skills */
+.skill-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+.skill-list span {
+  padding: 10px 20px;
+  background: #007bff;
+  color: white;
+  border-radius: 20px;
+  transition: transform 0.3s;
+}
+
+.skill-list span:hover {
+  transform: scale(1.1);
+}
+
+/* Contact */
+.contact a {
+  color: #007bff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.contact a:hover {
+  color: black;
+}
