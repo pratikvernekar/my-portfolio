@@ -20,15 +20,11 @@ const Header = ({ toggleDarkMode, darkMode }) => {
   }, [prevScrollY]);
 
   return (
-    <header
-      className={`header ${darkMode ? "dark" : "light"} ${
-        isVisible ? "visible" : "hidden"
-      }`}
-    >
-      <div className="header-left">
+    <header className={`header ${isVisible ? "visible" : "hidden"}`}>
+      {/* <div className="header-left">
         <img src={img} alt="Profile" className="profileImg" />
         <h1 className="logo">Pratik Vernekar</h1>
-      </div>
+      </div> */}
       <div className="header-right">
         <nav>
           <ul className="nav-links">
@@ -38,7 +34,7 @@ const Header = ({ toggleDarkMode, darkMode }) => {
                   to={section}
                   smooth={true}
                   duration={500}
-                  className="nav-item"
+                  className="nav-item box-border"
                 >
                   {section.charAt(0).toUpperCase() + section.slice(1)}
                 </Link>
@@ -48,7 +44,11 @@ const Header = ({ toggleDarkMode, darkMode }) => {
         </nav>
 
         <button className="toggle-button" onClick={toggleDarkMode}>
-          {darkMode ? <Sun size={20} color="white" /> : <Moon size={20} color="black" />}
+          {darkMode ? (
+            <Sun size={20} color="white" />
+          ) : (
+            <Moon size={20} color="black" />
+          )}
         </button>
       </div>
     </header>
