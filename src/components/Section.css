@@ -5,243 +5,145 @@
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  /* border-radius: 10px; */
-  transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+  transition: background 0.3s ease-in-out;
 }
 
-/* Light Mode */
 .light {
-  background: linear-gradient(
-    90deg,
-    rgba(0, 123, 255, 0.2),
-    rgba(255, 255, 255, 0.5)
-  );
-  color: black;
+  background-color: #ffffff;
+  color: #333;
 }
 
-/* Dark Mode */
 .dark {
-  background: linear-gradient(90deg, rgba(0, 0, 0, 0.8), rgba(50, 50, 50, 0.6));
-  color: white;
+  background-color: #121212;
+  color: #ffffff;
 }
 
 .section-content {
   display: flex;
+  flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  gap: 40px;
-  max-width: 1200px;
   width: 100%;
+  max-width: 1200px;
 }
 
 .text {
-  flex: 1;
+  max-width: 600px;
 }
 
-.text h2 {
+h2 {
   font-size: 2rem;
-  color: #007bff;
-  /* border: 1px solid #007bff; */
-}
-
-.text .role {
-  font-size: 1.2rem;
   font-weight: bold;
-  /* border: 1px solid #007bff; */
-  /* margin: 10px 0; */
+  margin-bottom: 10px;
 }
 
-.text .description {
+.role {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #666;
+}
+
+.description {
   font-size: 1rem;
-  min-width: 450px;
-}
-.b1 {
-  border: 1px solid #007bff;
-}
-/* Light Mode Text */
-.light .text h2,
-.light .role,
-.light .description {
-  color: black;
+  line-height: 1.5;
+  margin-top: 10px;
 }
 
-.darkBorder {
-  border: 5px solid #ffffff;
-  border-radius: 10px;
-}
-.lightBorder {
-  border: 5px solid #3b3b3b;
-  border-radius: 10px;
-}
-/* Dark Mode Text */
-.dark .text h2 {
-  color: #1e90ff;
+.social-links ul {
+  display: flex;
+  gap: 15px;
+  list-style: none;
+  padding: 0;
 }
 
-.dark .role,
-.dark .description {
-  color: #ddd;
+.icon-content {
+  position: relative;
+}
+
+.icon-content a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #ddd;
+  transition: background 0.3s ease-in-out;
+}
+
+.icon-content a:hover {
+  background-color: #555;
+}
+
+.icon-content svg {
+  width: 24px;
+  height: 24px;
+  color: #333;
+}
+
+.tooltip {
+  position: absolute;
+  bottom: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #333;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 0.8rem;
+  opacity: 0;
+  transition: opacity 0.3s;
+  pointer-events: none;
+}
+
+.icon-content:hover .tooltip {
+  opacity: 1;
 }
 
 .image-container {
-  flex: 1;
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
 }
 
 .profile-image {
-  width: 250px;
-  height: 250px;
+  width: 150px;
+  height: 150px;
   border-radius: 50%;
   object-fit: cover;
-  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-in-out;
 }
 
-.social-links {
-  /* border: 1px solid #007bff; */
-  width: 10%;
+.profile-image:hover {
+  transform: scale(1.05);
 }
 
-/* Responsive */
+.darkBorder {
+  border: 3px solid #fff;
+}
+
+.lightBorder {
+  border: 3px solid #333;
+}
+
+/* Responsive Design */
 @media (max-width: 768px) {
   .section-content {
     flex-direction: column;
     text-align: center;
   }
 
-  .image-container {
+  .text {
+    max-width: 100%;
+  }
+
+  .social-links ul {
+    justify-content: center;
+  }
+
+  .profile-image {
+    width: 120px;
+    height: 120px;
     margin-top: 20px;
   }
-
-  .social-links {
-    width: 40%;
-  }
-}
-
-/* From Uiverse.io by wilsondesouza */
-ul {
-  list-style: none;
-}
-
-.example-2 {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  /* border: 1px solid #e1e1e1; */
-}
-.example-2 .icon-content {
-  margin: 0 10px;
-  box-sizing: border-box;
-  position: relative;
-}
-.example-2 .icon-content .tooltip {
-  position: absolute;
-  top: -30px;
-  left: 50%;
-  transform: translateX(-50%);
-  color: #fff;
-  padding: 6px 10px;
-  border-radius: 5px;
-  opacity: 0;
-  visibility: hidden;
-  font-size: 14px;
-  transition: all 0.3s ease;
-}
-.example-2 .icon-content:hover .tooltip {
-  opacity: 1;
-  visibility: visible;
-  top: -50px;
-}
-.example-2 .icon-content a {
-  position: relative;
-  overflow: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  color: #4d4d4d;
-  background-color: #fff;
-  transition: all 0.3s ease-in-out;
-}
-.example-2 .icon-content a:hover {
-  box-shadow: 3px 2px 45px 0px rgb(0 0 0 / 12%);
-}
-.example-2 .icon-content a svg {
-  position: relative;
-  z-index: 1;
-  width: 30px;
-  height: 30px;
-}
-.example-2 .icon-content a:hover {
-  color: white;
-}
-.example-2 .icon-content a .filled {
-  position: absolute;
-  top: auto;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 0;
-  background-color: #000;
-  transition: all 0.3s ease-in-out;
-}
-.example-2 .icon-content a:hover .filled {
-  height: 100%;
-}
-
-.example-2 .icon-content a[data-social="linkedin"] .filled,
-.example-2 .icon-content a[data-social="linkedin"] ~ .tooltip {
-  background-color: #0274b3;
-}
-
-.example-2 .icon-content a[data-social="github"] .filled,
-.example-2 .icon-content a[data-social="github"] ~ .tooltip {
-  background-color: #24262a;
-}
-.example-2 .icon-content a[data-social="instagram"] .filled,
-.example-2 .icon-content a[data-social="instagram"] ~ .tooltip {
-  background: linear-gradient(
-    45deg,
-    #405de6,
-    #5b51db,
-    #b33ab4,
-    #c135b4,
-    #e1306c,
-    #fd1f1f
-  );
-}
-.example-2 .icon-content a[data-social="youtube"] .filled,
-.example-2 .icon-content a[data-social="youtube"] ~ .tooltip {
-  background-color: #ff0000;
-}
-
-/* From Uiverse.io by adamgiebl */
-button {
-  position: relative;
-  display: inline-block;
-  margin-left: 40px;
-  padding: 15px 30px;
-  text-align: center;
-  font-size: 18px;
-  letter-spacing: 1px;
-  text-decoration: none;
-  color: #007bff;
-  background: transparent;
-  cursor: pointer;
-  transition: ease-out 0.5s;
-  border: 2px solid #007bff;
-  border-radius: 10px;
-  box-shadow: inset 0 0 0 0 #007bff;
-}
-
-button:hover {
-  color: white;
-  box-shadow: inset 0 -100px 0 0 #007bff;
-}
-
-button:active {
-  transform: scale(0.9);
 }

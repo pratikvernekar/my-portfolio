@@ -99,14 +99,18 @@
   /* background: transparent; */
   border: none;
   cursor: pointer;
+  /* border: 1px solid #007bff; */
 }
 
 @media (max-width: 768px) {
   .menu-button {
     display: block;
     position: absolute;
-    left: -50px;
-    top: 10px;
+    left: 2%;
+    top: 50%;
+    background: transparent;
+    /* border: 1px solid #007bff; */
+
   }
 
   .header-right {
@@ -155,8 +159,8 @@
 
   .toggle-button {
     position: absolute;
-    right: 2%;
-    top: 2%;
+    right: 1%;
+    top: 0%;
     /* margin-right: auto; */
   }
 
