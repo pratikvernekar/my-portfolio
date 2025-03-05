@@ -22,7 +22,7 @@ const Header = ({ toggleDarkMode, darkMode }) => {
   return (
     <header className={`header ${isVisible ? "vidsible" : "hiddsen"}`}>
       <button className="menu-button" onClick={() => setMenuOpen(!menuOpen)}>
-        {menuOpen ? <X size={24} /> : <Menu size={24} />}
+        {menuOpen ? <X size={24} /> : <Menu size={26} />}
       </button>
       <div className={`header-right ${menuOpen ? "menu-open" : ""}`}>
         <nav>
@@ -33,7 +33,9 @@ const Header = ({ toggleDarkMode, darkMode }) => {
                   to={section}
                   smooth={true}
                   duration={500}
-                  className={`nav-item box-border ${!darkMode ? "dark-mode" : "light-mode"}`}
+                  className={`nav-item box-border ${
+                    !darkMode ? "dark-mode" : "light-mode"
+                  }`}
                   onClick={() => setMenuOpen(false)}
                 >
                   {section.charAt(0).toUpperCase() + section.slice(1)}
@@ -42,10 +44,13 @@ const Header = ({ toggleDarkMode, darkMode }) => {
             ))}
           </ul>
         </nav>
-
-        <button className="toggle-button" onClick={toggleDarkMode}>
-          {darkMode ? <Sun size={20} color="white" /> : <Moon size={20} color="black" />}
-        </button>
+      <button className="toggle-button" onClick={toggleDarkMode}>
+        {darkMode ? (
+          <Sun size={20} color="white" />
+        ) : (
+          <Moon size={20} color="black" />
+        )}
+      </button>
       </div>
     </header>
   );
