@@ -4,7 +4,7 @@ import s2 from "../assets/a1.jpeg";
 import s3 from "../assets/a3.jpeg";
 import s4 from "../assets/a4.jpeg";
 import s5 from "../assets/a5.jpeg";
-import md from "../assets/md.webm";
+import md from "../assets/md1.webm";
 import playstore from "../assets/pd.png";
 import appstore from "../assets/ad.png";
 import React, { useState, useEffect } from "react";
