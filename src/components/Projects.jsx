@@ -5,22 +5,19 @@ import s3 from "../assets/a3.jpeg";
 import s4 from "../assets/a4.jpeg";
 import s5 from "../assets/a5.jpeg";
 import md from "../assets/md1.webm";
-import playstore from "../assets/pd.png";
-import appstore from "../assets/ad.png";
+import playstore from "../assets/pd1.png";
+import appstore from "../assets/ad1.png";
 import React, { useState, useEffect } from "react";
 
-const Projects = ({ darkMode, id }) => {
-  const images = [s1, s2, s3, s4, s5];
+const Projects = ({ darkMode, id }) => {;
 
-  const [currentIndex, setCurrentIndex] = useState(0);
+  const descriptions = [
+    "Built and optimized scalable mobile applications for iOS and Android using React Native.",
+    "Developed UI components for features like appointment scheduling, graphical symptom tracking, and medication management.",
+    "Implemented push notifications using OneSignal and Firebase for timely updates.",
+    "Worked on the implementation of Google Maps services, integrating geolocation and geocoding features.",
+  ];
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
-    }, 2000); // Change image every 3 seconds
-
-    return () => clearInterval(interval);
-  }, []);
   const webProjects = [
     {
       title: "Web Project 1",
@@ -57,22 +54,15 @@ const Projects = ({ darkMode, id }) => {
               families.
             </p>
 
-            <p className="description">
-              • Built and optimized scalable mobile applications for iOS and
-              Android using React Native.
-            </p>
-            <p className="description">
-              • Developed UI components for features like appointment
-              scheduling, graphical symptom tracking, and medication management.
-            </p>
-            <p className="description">
-              • Implemented push notifications using OneSignal and Firebase for
-              timely updates.
-            </p>
+            {descriptions.map((item, index) => (
+              <p key={index} className="description">
+                • {item}
+              </p>
+            ))}
           </div>
-          <div>
+          <div className="downLoad-container">
             <img src={playstore} alt="Profile" className={`downloadIcon`} />
-            <img src={appstore} alt="Profile" className={`downloadIcon`} />
+            <img src={appstore} alt="Profile" className={`downloadIcon1`} />
           </div>
 
           <div className={`ss-container`}>

@@ -20,7 +20,7 @@ const Header = ({ toggleDarkMode, darkMode }) => {
   }, [prevScrollY]);
 
   return (
-    <header className={`header ${isVisible ? "vidsible" : "hiddsen"}`}>
+    <header className={`header`}>
       <button className="menu-button" onClick={() => setMenuOpen(!menuOpen)}>
         {menuOpen ? (
           <X size={26} color="#007bff" />
@@ -38,7 +38,9 @@ const Header = ({ toggleDarkMode, darkMode }) => {
                   smooth={true}
                   duration={500}
                   className={`nav-item box-border ${
-                    !darkMode ? "dark-mode" : "light-mode"
+                    !darkMode
+                      ? "dark-mode dark-mode-shadow"
+                      : "light-mode light-mode-shadow"
                   }`}
                   onClick={() => setMenuOpen(false)}
                 >
@@ -48,7 +50,14 @@ const Header = ({ toggleDarkMode, darkMode }) => {
             ))}
           </ul>
         </nav>
-        <button className="toggle-button" onClick={toggleDarkMode}>
+        <button
+          className={`toggle-button ${
+            !darkMode
+              ? "dark-mode dark-mode-shadow"
+              : "light-mode light-mode-shadow"
+          }`}
+          onClick={toggleDarkMode}
+        >
           {darkMode ? (
             <Sun size={20} color="white" />
           ) : (
