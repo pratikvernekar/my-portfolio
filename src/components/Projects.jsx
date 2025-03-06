@@ -9,8 +9,7 @@ import playstore from "../assets/pd1.png";
 import appstore from "../assets/ad1.png";
 import React, { useState, useEffect } from "react";
 
-const Projects = ({ darkMode, id }) => {;
-
+const Projects = ({ darkMode, id }) => {
   const descriptions = [
     "Built and optimized scalable mobile applications for iOS and Android using React Native.",
     "Developed UI components for features like appointment scheduling, graphical symptom tracking, and medication management.",
@@ -44,7 +43,13 @@ const Projects = ({ darkMode, id }) => {;
           <div className="text">
             {/* <h2></h2> */}
             {/* {children} */}
-            <p className="role">MDHEALTHTRAK</p>
+            <p
+              className="description"
+              style={{ fontWeight: "bold", fontSize: "1.3rem" }}
+            >
+              MDHEALTHTRAK
+            </p>
+
             <p className="description">
               MDHealthTrak is a health management app designed to simplify
               elderly care. It enables users to track symptoms, schedule
@@ -61,8 +66,28 @@ const Projects = ({ darkMode, id }) => {;
             ))}
           </div>
           <div className="downLoad-container">
-            <img src={playstore} alt="Profile" className={`downloadIcon`} />
-            <img src={appstore} alt="Profile" className={`downloadIcon1`} />
+            <a
+              href="https://play.google.com/store/apps/details?id=com.liveayurprana.prod&hl=en_IN"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src={playstore}
+                alt="Google Play Store"
+                className="downloadIcon"
+              />
+            </a>
+            <a
+              href="https://apps.apple.com/in/app/ayurprana/id6469480400"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src={appstore}
+                alt="Apple App Store"
+                className="downloadIcon1"
+              />
+            </a>
           </div>
 
           <div className={`ss-container`}>
