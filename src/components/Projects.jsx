@@ -85,7 +85,7 @@ const Projects = ({ darkMode, id }) => {;
       </div>
 
       {/* Web Projects */}
-      <div>
+      {/* <div>
         <h2 className="category-title">Web Apps</h2>
         <div className="project-list">
           {webProjects.map((project, index) => (
@@ -98,7 +98,7 @@ const Projects = ({ darkMode, id }) => {;
             </div>
           ))}
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };
