@@ -4,7 +4,7 @@ import s2 from "../assets/a1.jpeg";
 import s3 from "../assets/a3.jpeg";
 import s4 from "../assets/a4.jpeg";
 import s5 from "../assets/a5.jpeg";
-import md from "../assets/md1.webm";
+import md from "../assets/1_1.webm";
 import playstore from "../assets/pd1.png";
 import appstore from "../assets/ad1.png";
 import React, { useState, useEffect } from "react";
@@ -15,6 +15,12 @@ const Projects = ({ darkMode, id }) => {
     "Developed UI components for features like appointment scheduling, graphical symptom tracking, and medication management.",
     "Implemented push notifications using OneSignal and Firebase for timely updates.",
     "Worked on the implementation of Google Maps services, integrating geolocation and geocoding features.",
+  ];
+  const descriptions2 = [
+    "Contributed to the development of the AyurPrana app using React Native for iOS and Android, integrating wellness services.",
+    "Implemented UI components, integrated APIs using Axios, and added video player support for guided yoga and Ayurveda sessions.",
+    "Optimized app performance to ensure smooth functionality across different devices.",
+    "Enhanced user experience by delivering a seamless and interactive wellness platform.",
   ];
 
   const webProjects = [
@@ -38,19 +44,25 @@ const Projects = ({ darkMode, id }) => {
     >
       {/* Mobile Projects */}
       <div>
-        <h2 className="category-title">Mobile Apps</h2>
+        <h2 className="category-title scale-up">Mobile Apps</h2>
         <div className="section-content">
           <div className="text">
             {/* <h2></h2> */}
             {/* {children} */}
             <p
-              className="description"
+              className={`description  scale-up ${
+                darkMode ? "blueColor" : "blackColor"
+              }`}
               style={{ fontWeight: "bold", fontSize: "1.3rem" }}
             >
               MDHEALTHTRAK
             </p>
 
-            <p className="description">
+            <p
+              className={`description  ${
+                darkMode ? "blueColor" : "blackColor"
+              }`}
+            >
               MDHealthTrak is a health management app designed to simplify
               elderly care. It enables users to track symptoms, schedule
               appointments, log medications, and monitor nutrition. With
@@ -60,7 +72,12 @@ const Projects = ({ darkMode, id }) => {
             </p>
 
             {descriptions.map((item, index) => (
-              <p key={index} className="description">
+              <p
+                key={index}
+                className={`description  ${
+                  darkMode ? "blueColor a1" : "blackColor a2"
+                }`}
+              >
                 • {item}
               </p>
             ))}
@@ -96,6 +113,70 @@ const Projects = ({ darkMode, id }) => {
             </video>
           </div>
         </div>
+
+        {/* AYURPRANA */}
+        <div style={{ marginTop: "3rem" }} className="section-content">
+          <div className="text">
+            {/* <h2></h2> */}
+            {/* {children} */}
+            <p
+              className={`${darkMode ? "brownColor" : "blackColor"}`}
+              style={{ fontWeight: "bold", fontSize: "1.3rem" }}
+            >
+              AyurPrana+
+            </p>
+
+            <p className={`${darkMode ? "brownColor" : "blackColor"}`}>
+              AyurPrana+ is a streaming platform offering inspirational
+              documentaries, films, and wellness practices rooted in Ayurveda,
+              Yoga, and Herbalism. It provides content to uplift the spirit,
+              reconnect with nature, and promote holistic healing. Users can
+              explore mindfulness, breathwork, and traditional remedies through
+              curated videos. Available on iOS and Android, with flexible
+              membership plans.
+            </p>
+
+            {descriptions2.map((item, index) => (
+              <p
+                key={index}
+                className={`${darkMode ? "brownColor" : "blackColor"}`}
+              >
+                • {item}
+              </p>
+            ))}
+          </div>
+          <div className="downLoad-container">
+            <a
+              href="https://play.google.com/store/apps/details?id=com.liveayurprana.prod&hl=en_IN"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src={playstore}
+                alt="Google Play Store"
+                className="downloadIcon"
+              />
+            </a>
+            <a
+              href="https://apps.apple.com/in/app/ayurprana/id6469480400"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src={appstore}
+                alt="Apple App Store"
+                className="downloadIcon1"
+              />
+            </a>
+          </div>
+
+          <div className={`ss-container`}>
+            <video autoPlay loop muted className="ss-image">
+              <source src={md} type="video/webm" />
+            </video>
+          </div>
+        </div>
+
         {/* <div className="project-list">
           {mobileProjects.map((project, index) => (
             <div key={index} className="project">

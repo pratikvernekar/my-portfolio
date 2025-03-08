@@ -1,23 +1,21 @@
 import "./Section.css";
-import profilePic from "../assets/profile.jpeg"; // Import image
-import profilePic1 from "../assets/11.jpg"; // Import image
-import profilePic2 from "../assets/22.jpg"; // Import image
+import profilePic from "../assets/profile.jpeg";
 
 const Section = ({ id, title, children, darkMode }) => {
   return (
     <section id={id} className={`section ${darkMode ? "dark" : "light"}`}>
-      <div className="section-content">
-        <div className="text">
+      <div className="section-content fade-in">
+        <div className="text slide-in-left">
           <h2>Hi, I'm Pratik Vernekar</h2>
           {children}
           <p className="role">Software Developer | React & React Native</p>
-          <p className="description">
+          <p className="description1">
             A frontend developer skilled in React and React Native. Focused on
             crafting clean & user-friendly experiences.
           </p>
         </div>
 
-        <div className="social-links">
+        <div className="social-links scale-up">
           <ul className="example-2">
             <li className="icon-content">
               <a
@@ -69,10 +67,9 @@ const Section = ({ id, title, children, darkMode }) => {
             </li>
           </ul>
         </div>
-
-        <div className="image-container">
+        <div className="image-container scale-up">
           <img
-            src={darkMode ? profilePic1 : profilePic2}
+            src={profilePic}
             alt="Profile"
             className={`profile-image ${
               darkMode ? "darkBorder" : "lightBorder"
