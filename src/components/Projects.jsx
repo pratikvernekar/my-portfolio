@@ -5,6 +5,7 @@ import s3 from "../assets/a3.jpeg";
 import s4 from "../assets/a4.jpeg";
 import s5 from "../assets/a5.jpeg";
 import md from "../assets/1_1.webm";
+import ap from "../assets/1_2.webm";
 import playstore from "../assets/pd1.png";
 import appstore from "../assets/ad1.png";
 import React, { useState, useEffect } from "react";
@@ -170,9 +171,14 @@ const Projects = ({ darkMode, id }) => {
             </a>
           </div>
 
-          <div className={`ss-container`}>
+          <div
+            style={{
+              boxShadow: " 0px 4px 10px rgba(213, 135, 40, 0.5)",
+            }}
+            className={`ss-container`}
+          >
             <video autoPlay loop muted className="ss-image">
-              <source src={md} type="video/webm" />
+              <source src={ap} type="video/webm" />
             </video>
           </div>
         </div>
