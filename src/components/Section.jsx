@@ -5,7 +5,7 @@ const Section = ({ id, title, children, darkMode }) => {
   return (
     <section id={id} className={`section ${darkMode ? "dark" : "light"}`}>
       <div className="section-content fade-in">
-        <div className="text slide-in-left">
+        <div className="text">
           <h2>Hi, I'm Pratik Vernekar</h2>
           {children}
           <p className="role">Software Developer | React & React Native</p>
