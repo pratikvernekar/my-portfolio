@@ -127,24 +127,37 @@ h2 {
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  background-color: #ddd;
+  background-color: #ffffff;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.7);
   transition: background 0.3s ease-in-out;
-}
-
-.icon-content a:hover {
-  background-color: #555;
 }
 
 .icon-content svg {
   width: 30px;
   height: 30px;
   color: #333;
+  transition: fill 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
-.icon-content1 {
-  width: 30px;
-  height: 30px;
-  color: #007bf5;
+.icon-content a:hover {
+  background-color: #0a66c2;
+  transform: scale(1.05);
+}
+
+
+.icon-content a:hover svg {
+  color: #fff;
+}
+
+.icon-content2 a:hover {
+  background-color: #333;
+}
+.icon-content2 a:hover svg {
+  color: #fff;
+}
+
+.icon-k a:hover {
+  background-color: #333;
 }
 
 .tooltip {

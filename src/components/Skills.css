@@ -1,10 +1,13 @@
 .skills-container {
   text-align: center;
   padding: 50px 10%;
-  height: 100vh;
+  min-height: 100vh;
   box-sizing: border-box;
-  /* box-shadow: 0px 10px 30px rgba(0, 0, 0, 01); */
-  transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: center; */
+  transition: background 0.4s ease-in-out, color 0.4s ease-in-out;
 }
 
 /* Light Mode */
@@ -19,15 +22,22 @@
 
 /* Dark Mode */
 .dark {
-  background: linear-gradient(90deg, rgba(0, 0, 0, 0.8), rgba(50, 50, 50, 0.6));
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.9), rgba(50, 50, 50, 0.7));
   color: white;
 }
 
 .skills-title {
-  font-size: 2rem;
+  font-size: 1.8rem;
   font-weight: bold;
-  margin-bottom: 20px;
-  color: #007bff;
+  margin-bottom: 2rem;
+  /* margin-top: 2.2rem; */
+  /* margin-bottom: 25px; */
+  color: var(--title-color, #007bff);
+  transition: color 0.3s ease;
+}
+
+.dark .skills-title {
+  --title-color: #007bff;
 }
 
 /* Skill List */
@@ -35,32 +45,78 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 15px;
+  /* gap: 1rem; */
+  max-width: 70vw;
+  /* border: 1px solid red; */
 }
 
+/* Skill Item */
 .skill {
-  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.2rem;
   font-weight: 500;
-  padding: 10px 20px;
-  border-radius: 20px;
+  padding: 12px 24px;
+  border-radius: 25px;
   background: rgba(255, 255, 255, 0.2);
-  backdrop-filter: blur(10px);
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, background 0.3s ease;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-decoration: none;
+  /* border: 1px solid red; */
+}
+
+/* Skill Icons */
+.skill svg {
+  font-size: 24px;
+  transition: transform 0.3s ease;
 }
 
 /* Light Mode Skills */
 .light .skill {
   background: rgba(0, 123, 255, 0.2);
   color: black;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 
 /* Dark Mode Skills */
 .dark .skill {
   background: rgba(255, 255, 255, 0.1);
   color: white;
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.3);
+}
+.darkText {
+  color: #000000 !important;
 }
 
+.lightText {
+  color: #ffffff !important;
+}
+
+/* Hover Effects */
 .skill:hover {
-  transform: scale(1.1);
+  transform: scale(1.05);
+  background: rgba(255, 255, 255, 0.2);
+  /* box-shadow: 0 6px 15px rgba(255, 255, 255, 0.4); */
+}
+
+.skill:hover svg {
+  transform: rotate(8deg) scale(1.05);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .skills-title {
+    font-size: 1.5rem;
+  }
+  .skill {
+    font-size: 1rem;
+    padding: 10px 18px;
+  }
+  .skill svg {
+    font-size: 20px;
+  }
 }

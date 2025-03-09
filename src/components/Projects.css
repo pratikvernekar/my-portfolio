@@ -75,11 +75,11 @@
 }
 .a1:hover {
   /* Increase size */
-  transform: scale(1.05);
+  /* transform: scale(1.05); */
   transition: all 0.25s ease-in-out;
   /* Enhance shadow on hover */
   border-radius: 0.4rem;
-  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.3);
+  /* text-shadow: 0 4px 10px rgba(255, 255, 255, 0.7); */
 }
 .a2:hover {
   /* Increase size */
@@ -88,6 +88,27 @@
   /* Enhance shadow on hover */
   border-radius: 0.4rem;
   box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.7);
+}
+@keyframes glowingText {
+  0% {
+    color: #ffffff;
+    text-shadow: 0 0 5px #ffffff, 0 0 10px #000000, 0 0 15px #000000;
+  }
+  50% {
+    color: #0066ff;
+    text-shadow: 0 0 10px #ffffff, 0 0 20px #000000, 0 0 30px #000000;
+  }
+  100% {
+    color: #ffffff;
+    text-shadow: 0 0 5px #ffffff, 0 0 10px #000000, 0 0 15px #000000;
+  }
+}
+
+.animated-text {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  animation: glowingText 1.5s infinite alternate;
 }
 
 .ss-image {
@@ -99,13 +120,13 @@
 .category-title {
   font-size: 1.8rem;
   margin-bottom: 0px;
-  margin-top: 2rem;
+  margin-top: 2.2rem;
   text-align: center;
-  color: #000000;
+  color: #007bff;
 }
 
 .dark .category-title {
-  color: #ffffff;
+  color: #007bff;
 }
 
 .project-list {

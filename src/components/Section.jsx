@@ -27,8 +27,8 @@ const Section = ({ id, title, children, darkMode }) => {
                 <div className="filled"></div>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  width="16"
-                  height="16"
+                  width="20"
+                  height="20"
                   fill="currentColor"
                   className="bi bi-linkedin icon-content1"
                   viewBox="0 0 16 16"
@@ -41,7 +41,8 @@ const Section = ({ id, title, children, darkMode }) => {
               </a>
               <div className="tooltip">LinkedIn</div>
             </li>
-            <li className="icon-content">
+
+            <li className="icon-content icon-content2">
               <a
                 target="_blank"
                 href="https://github.com/pratikvernekar"

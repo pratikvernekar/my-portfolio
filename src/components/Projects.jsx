@@ -76,7 +76,7 @@ const Projects = ({ darkMode, id }) => {
               <p
                 key={index}
                 className={`description  ${
-                  darkMode ? "blueColor a1" : "blackColor a2"
+                  darkMode ? "blueColor" : "blackColor"
                 }`}
               >
                 • {item}
@@ -114,7 +114,6 @@ const Projects = ({ darkMode, id }) => {
             </video>
           </div>
         </div>
-
         {/* AYURPRANA */}
         <div style={{ marginTop: "3rem" }} className="section-content">
           <div className="text">
@@ -183,6 +182,11 @@ const Projects = ({ darkMode, id }) => {
           </div>
         </div>
 
+        <div className={`animated-container ${darkMode ? "dark-mode" : "light-mode"}`}>
+
+        <p className="animated-text">
+          New Projects Coming Soon</p>
+        </div>
         {/* <div className="project-list">
           {mobileProjects.map((project, index) => (
             <div key={index} className="project">

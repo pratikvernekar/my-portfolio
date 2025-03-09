@@ -3,42 +3,31 @@
   padding: 60px 15%;
   box-sizing: border-box;
   height: 100vh;
-  /* border-radius: 12px; */
-  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
-  /* transition: all 0.3s ease-in-out; */
   backdrop-filter: blur(10px);
+  transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
 /* Light Mode */
 .light {
-  background: linear-gradient(
-    135deg,
-    rgba(0, 123, 255, 0.2),
-    rgba(255, 255, 255, 0.6)
-  );
+  background: linear-gradient(135deg, rgba(0, 123, 255, 0.2), rgba(255, 255, 255, 0.6));
   color: #222;
 }
 
 /* Dark Mode */
 .dark {
-  background: linear-gradient(
-    135deg,
-    rgba(15, 15, 15, 0.9),
-    rgba(40, 40, 40, 0.8)
-  );
+  background: linear-gradient(135deg, rgba(15, 15, 15, 0.9), rgba(40, 40, 40, 0.8));
   color: #fff;
 }
 
 .contact-title {
-  font-size: 2.5rem;
+  font-size: 1.8rem;
   font-weight: bold;
   margin-bottom: 30px;
   color: #007bff;
-  letter-spacing: 1px;
   position: relative;
 }
 
-.contact-title::after {
+/* .contact-title::after {
   content: "";
   display: block;
   width: 80px;
@@ -46,7 +35,7 @@
   background: #007bff;
   margin: 10px auto;
   border-radius: 5px;
-}
+} */
 
 /* Contact Info */
 .contact-info {
@@ -55,6 +44,13 @@
   gap: 15px;
   font-size: 1.3rem;
   font-weight: 500;
+}
+
+/* Icons */
+.contact-icon {
+  margin-right: 10px;
+  color: #007bff;
+  font-size: 1.2rem;
 }
 
 /* Links */
@@ -67,8 +63,8 @@
 }
 
 .contact-info a:hover {
-  color: #ffcc00;
-  text-shadow: 0 0 10px rgba(255, 204, 0, 0.6);
+  color: #000000;
+  text-shadow: 0 0 10px rgba(236, 236, 236, 0.6);
 }
 
 /* Underline Animation */
@@ -85,7 +81,7 @@
 }
 
 .contact-info a:hover::after {
-  width: 100%;
+  /* width: 100%; */
 }
 
 /* Dark Mode Links */
@@ -94,7 +90,7 @@
 }
 
 .dark .contact-info a:hover {
-  color: #ffcc00;
+  color: #ffffff;
 }
 
 /* Responsive */
@@ -104,10 +100,14 @@
   }
 
   .contact-title {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
 
   .contact-info {
     font-size: 1.1rem;
+  }
+
+  .contact-icon {
+    font-size: 1rem;
   }
 }

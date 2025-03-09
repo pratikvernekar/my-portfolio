@@ -1,4 +1,11 @@
 import "./Contact.css";
+import {
+  FaEnvelope,
+  FaPhone,
+  FaGithub,
+  FaLinkedin,
+  FaFileAlt,
+} from "react-icons/fa";
 
 const Contact = ({ darkMode, id }) => {
   return (
@@ -6,20 +13,25 @@ const Contact = ({ darkMode, id }) => {
       <h2 className="contact-title">Contact Me</h2>
       <div className="contact-info">
         <p>
-          Email:{" "}
-          <a href="mailto:your.email@example.com">your.email@example.com</a>
+          <FaPhone className="contact-icon" />
+          Phone: <a>+91 9535330160</a>
         </p>
         <p>
+          <FaEnvelope className="contact-icon" />
+          Email:{" "}
+          <a href="mailto:your.email@example.com">
+            vernekarpratik26.pv@gmail.com
+          </a>
+        </p>
+        {/* <p>
+          <FaGithub className="contact-icon" />
           GitHub:{" "}
-          <a
-            href="https://github.com/yourusername"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer">
             github.com/yourusername
           </a>
         </p>
         <p>
+          <FaLinkedin className="contact-icon" />
           LinkedIn:{" "}
           <a
             href="https://linkedin.com/in/yourname"
@@ -27,6 +39,17 @@ const Contact = ({ darkMode, id }) => {
             rel="noopener noreferrer"
           >
             linkedin.com/in/yourname
+          </a>
+        </p> */}
+        <p>
+          <FaFileAlt className="contact-icon" />
+          Resume:{" "}
+          <a
+            href="https://drive.google.com/file/d/1QuIVgRCOdJnUJmhDgE2RadACxlKKYQek/view?usp=drive_link"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            View Resume
           </a>
         </p>
       </div>
