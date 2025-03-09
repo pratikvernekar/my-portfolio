@@ -171,9 +171,9 @@
     /* flex-grow: 1; */
     flex-direction: column;
     /* width: 150%; */
-    margin-left: 25vw;
+    margin-left: 22vw;
     margin-top: 0;
-    /* border: 1px solid #007bff; */
+    border: 1px solid #007bff;
   }
   .nav-item {
     width: 50vw;
