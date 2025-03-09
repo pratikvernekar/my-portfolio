@@ -9,6 +9,7 @@ import ap from "../assets/1_2.webm";
 import playstore from "../assets/pd1.png";
 import appstore from "../assets/ad1.png";
 import React, { useState, useEffect } from "react";
+import { color } from "framer-motion";
 
 const Projects = ({ darkMode, id }) => {
   const descriptions = [
@@ -84,8 +85,11 @@ const Projects = ({ darkMode, id }) => {
             ))}
           </div>
           <div className="downLoad-container">
-            <a
-              href="https://play.google.com/store/apps/details?id=com.liveayurprana.prod&hl=en_IN"
+            <p style={{ color: "red" }}>
+              <strong>App not available in store yet!</strong>
+            </p>
+            {/* <a
+              // href="https://play.google.com/store/apps/details?id=com.liveayurprana.prod&hl=en_IN"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -96,7 +100,7 @@ const Projects = ({ darkMode, id }) => {
               />
             </a>
             <a
-              href="https://apps.apple.com/in/app/ayurprana/id6469480400"
+              // href="https://apps.apple.com/in/app/ayurprana/id6469480400"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -105,7 +109,7 @@ const Projects = ({ darkMode, id }) => {
                 alt="Apple App Store"
                 className="downloadIcon1"
               />
-            </a>
+            </a> */}
           </div>
 
           <div className={`ss-container`}>
@@ -182,10 +186,12 @@ const Projects = ({ darkMode, id }) => {
           </div>
         </div>
 
-        <div className={`animated-container ${darkMode ? "dark-mode" : "light-mode"}`}>
-
-        <p className="animated-text">
-          New Projects Coming Soon</p>
+        <div
+          className={`animated-container ${
+            darkMode ? "dark-mode" : "light-mode"
+          }`}
+        >
+          <p className="animated-text">New Projects Coming Soon</p>
         </div>
         {/* <div className="project-list">
           {mobileProjects.map((project, index) => (
