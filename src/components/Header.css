@@ -171,12 +171,12 @@
     /* flex-grow: 1; */
     flex-direction: column;
     /* width: 150%; */
-    margin-left: 5vw;
+    margin-left: 25vw;
     margin-top: 0;
     /* border: 1px solid #007bff; */
   }
   .nav-item {
-    width: 80vw;
+    width: 50vw;
     padding: 10px;
     border: 0;
     background-color: #007bff;
@@ -186,7 +186,7 @@
   .toggle-button {
     position: absolute;
     right: 5%;
-    top: 5%;
+    top: 2%;
     /* margin-right: auto; */
   }
 

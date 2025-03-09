@@ -104,8 +104,12 @@
   }
 }
 
+.animated-container {
+  margin-top: 2.5rem;
+  /* border: 1px solid red; */
+}
 .animated-text {
-  font-size: 24px;
+  font-size: 1.3rem;
   font-weight: bold;
   text-align: center;
   animation: glowingText 1.5s infinite alternate;
