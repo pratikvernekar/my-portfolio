@@ -47,7 +47,7 @@ const Projects = ({ darkMode, id }) => {
       {/* Mobile Projects */}
       <div>
         <h2 className="category-title scale-up">Mobile Apps</h2>
-        <div className="section-content">
+        <div className="section-content-proj">
           <div className="text">
             {/* <h2></h2> */}
             {/* {children} */}
@@ -119,7 +119,7 @@ const Projects = ({ darkMode, id }) => {
           </div>
         </div>
         {/* AYURPRANA */}
-        <div style={{ marginTop: "3rem" }} className="section-content">
+        <div style={{ marginTop: "3rem" }} className="section-content-proj">
           <div className="text">
             {/* <h2></h2> */}
             {/* {children} */}
