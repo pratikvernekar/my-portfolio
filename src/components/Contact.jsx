@@ -19,7 +19,7 @@ const Contact = ({ darkMode, id }) => {
         <p>
           <FaEnvelope className="contact-icon" />
           Email:{" "}
-          <a href="mailto:your.email@example.com">
+          <a href="mailto:vernekarpratik26.pv@gmail.com">
             vernekarpratik26.pv@gmail.com
           </a>
         </p>
